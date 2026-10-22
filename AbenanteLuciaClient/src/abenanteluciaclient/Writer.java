@@ -3,46 +3,39 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package abenanteluciaclient;
-import java.io.DataInputStream;
+
 import java.io.DataOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.*;
+
 /**
  *
  * @author abenante.lucia
  */
-public class Writer implements Runnable {
+public class Writer {
+// Si occupa solo di inviare messaggi al server.
+// Non è un thread: i metodi vengono chiamati quando l'utente preme un bottone.
 
-    Scanner scr = new Scanner(System.in);// per leggere la tastiera 
-    Socket socket;
+    Socket socket; // il collegamento con il server
+    DataOutputStream dataOutputStream;// permette di inviare stringhe con writeUTF
 
-    @Override
-    public void run() {
-
-        try {
-            OutputStream outputStream = socket.getOutputStream(); //l'uscita della socket (i byte che vanno la server)
-            DataOutputStream dataOutputStream = new DataOutputStream(outputStream);//serve per writeUTF che poi manda la string
-            while (true) { // per scrivere più messaggi
-                System.out.println("scrivi");
-
-                String msg = scr.nextLine();
-                dataOutputStream.writeUTF(msg);
-
-                if (msg.equals("exit")) { // per uscire
-                    System.out.println("fine client");
-                    break;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("errore");
-        }
+    // Riceve il socket e prepara il flusso di uscita (i byte che vanno al servr)
+    public void setSocket(Socket socket) throws IOException {
+        this.socket = socket;
+        OutputStream outputStream = socket.getOutputStream(); // i byte che vanno al server
+        dataOutputStream = new DataOutputStream(outputStream); // serve per writeUTF
     }
 
-    public void setSocket(Socket socket) {
-        this.socket = socket;
+    // Invia una stringa al server.
+    // Se l'invio fallisce stampa un errore invece di bloccare il programma.
+    public void invia(String msg) {
+        try {
+            dataOutputStream.writeUTF(msg);
+        } catch (IOException e) {
+            System.out.println("errore invio");
+        }
     }
 
 }
