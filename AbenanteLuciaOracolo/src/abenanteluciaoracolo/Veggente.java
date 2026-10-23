@@ -27,19 +27,31 @@ public class Veggente implements Runnable {
         "Sì, senza alcun dubbio.",
         "Le nebbie del destino sono fitte: riprova più tardi.",
         "I segni dicono di no.",
-        "Tutto dipende dalle scelte che farai."
+        "Tutto dipende dalle scelte che farai.",
+        "Le stelle convergono per darti ragione.",
+        "Il passato e il futuro si scontrano: la risposta è incerta.",
+        "Un antico spirito suggerisce di procedere con cautela.",
+        "Il velo si è alzato: la risposta è affermativa."
     };
     static final String[] CATTIVI_RISP = {
         "Vedo solo guai all'orizzonte, e sono tutti tuoi.",
         "Che domanda stupida, ma ti rispondo: no.",
         "Il tuo futuro è buio quanto il fondo della mia sfera.",
-        "Non ho tempo per le tue sciocchezze."
+        "Non ho tempo per le tue sciocchezze.",
+        "Anche se ti dicessi di sì, riusciresti comunque a rovinare tutto.",
+        "La risposta è no, e faresti bene a fartene una ragione.",
+        "Il fato ha le mani legate: non può aiutarti con questa follia.",
+        "Sperare in una risposta positiva è il tuo errore più grande."
     };
     static final String[] SARCASTICI_RISP = {
         "Oh certo, perché io so TUTTO. Ovviamente sì.",
         "Che originalità, nessuno me l'aveva mai chiesto.",
         "La sfera dice: 'forse'. Ma lei è sempre stata ottimista.",
-        "Wow, che domanda profonda. Sono commosso."
+        "Wow, che domanda profonda. Sono commosso.",
+        "Certo, chiedilo a una palla di vetro, è sicuramente il metodo scientifico migliore.",
+        "La probabilità che tu abbia ragione è pari allo zero assoluto.",
+        "Sì, proprio come quando prometti di metterti a dieta da lunedì.",
+        "La sfera è andata in ferie mentali dopo questa domanda."
     };
 
     // FRASI PER FUTURO
@@ -47,19 +59,31 @@ public class Veggente implements Runnable {
         "Il tuo desiderio si avvererà, ma non come pensi.",
         "Una persona importante entrerà presto nella tua vita.",
         "Ti attende un viaggio inatteso.",
-        "La fortuna sorride a chi osa: fai la tua mossa."
+        "La fortuna sorride a chi osa: fai la tua mossa.",
+        "Una rivelazione inaspettata cambierà la tua prospettiva.",
+        "Supererai un ostacolo che ora ti sembra insormontabile.",
+        "Un piccolo gesto gentile genererà una grande opportunità.",
+        "Il vento del cambiamento soffia a tuo favore."
     };
     static final String[] CATTIVI_FUTURO = {
         "Il tuo futuro è un disastro e te lo sei meritato.",
         "Nessuno ricorderà il tuo nome. Nemmeno io.",
         "Presto perderai qualcosa. Probabilmente la dignità.",
-        "Sprecherai il tuo tempo, come sempre."
+        "Sprecherai il tuo tempo, come sempre.",
+         "Le tue ambizioni si scontreranno presto con la dura realtà.",
+        "Preparati a collezionare una serie epica di fallimenti.",
+        "Il caos ti travolgerà, e nessuno muoverà un dito per salvarti.",
+        "Hai un futuro radioso davanti... peccato che sia un incendio."   
     };
     static final String[] SARCASTICI_FUTURO = {
         "Vedo successo, ricchezza e fama. In un altro universo, ovviamente.",
         "Il futuro ti riserva grandi cose, tipo il lunedì.",
         "Vedo una svolta epocale: domani ti alzerai dal letto.",
-        "Incontrerai una persona speciale: il tuo frigorifero a mezzanotte."
+        "Incontrerai una persona speciale: il tuo frigorifero a mezzanotte.",
+        "Vedo una grandissima carriera da procrastinatore professionista.",
+        "Il tuo conto in banca piangerà, ma almeno avrai dei fantastici meme.",
+        "Diventerai una leggenda... nel dimenticatoio.",
+        "Il destino ha grandi piani per te, ma ha perso l'agenda."
     };
 
     static final Random random = new Random();// Generatore di numeri casuali per scegliere una frase

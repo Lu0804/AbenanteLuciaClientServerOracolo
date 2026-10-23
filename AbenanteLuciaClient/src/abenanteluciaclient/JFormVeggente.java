@@ -105,7 +105,6 @@ public class JFormVeggente extends javax.swing.JFrame implements Ascoltatore {
         pnlSfondo.setBackground(new java.awt.Color(197, 160, 89));
         pnlSfondo.setLayout(null);
 
-        lblZoltarImg.setForeground(new java.awt.Color(0, 0, 0));
         lblZoltarImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Zoltar.gif"))); // NOI18N
         pnlSfondo.add(lblZoltarImg);
         lblZoltarImg.setBounds(240, 110, 280, 210);
@@ -162,9 +161,9 @@ public class JFormVeggente extends javax.swing.JFrame implements Ascoltatore {
         pnlSfondo.add(jScrollPane1);
         jScrollPane1.setBounds(570, 90, 240, 250);
         pnlSfondo.add(txtFldDomanda);
-        txtFldDomanda.setBounds(280, 360, 190, 26);
+        txtFldDomanda.setBounds(280, 360, 190, 22);
 
-        cmbxPersonalità.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Zoltar", "cattivo", "sarcastico" }));
+        cmbxPersonalità.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Zoltar", "Cattivo", "Sarcastico" }));
         cmbxPersonalità.setToolTipText("");
         cmbxPersonalità.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -172,7 +171,7 @@ public class JFormVeggente extends javax.swing.JFrame implements Ascoltatore {
             }
         });
         pnlSfondo.add(cmbxPersonalità);
-        cmbxPersonalità.setBounds(600, 420, 150, 26);
+        cmbxPersonalità.setBounds(600, 420, 150, 22);
 
         lblPersonalita.setFont(new java.awt.Font("Georgia", 1, 18)); // NOI18N
         lblPersonalita.setForeground(new java.awt.Color(255, 215, 0));
@@ -181,9 +180,8 @@ public class JFormVeggente extends javax.swing.JFrame implements Ascoltatore {
         lblPersonalita.setBounds(620, 380, 120, 21);
 
         lblOracolo.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
-        lblOracolo.setForeground(new java.awt.Color(0, 0, 0));
         pnlSfondo.add(lblOracolo);
-        lblOracolo.setBounds(30, 120, 150, 160);
+        lblOracolo.setBounds(20, 120, 150, 160);
 
         lblTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ticket1.png"))); // NOI18N
         lblTicket.setText("jLabel1");
