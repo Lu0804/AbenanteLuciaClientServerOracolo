@@ -181,7 +181,7 @@ public class JFormVeggente extends javax.swing.JFrame implements Ascoltatore {
 
         lblOracolo.setFont(new java.awt.Font("Georgia", 0, 14)); // NOI18N
         pnlSfondo.add(lblOracolo);
-        lblOracolo.setBounds(20, 120, 150, 160);
+        lblOracolo.setBounds(20, 120, 170, 160);
 
         lblTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ticket1.png"))); // NOI18N
         lblTicket.setText("jLabel1");
