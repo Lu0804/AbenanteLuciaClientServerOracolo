@@ -7,6 +7,7 @@ package abenanteluciaoracolo;
 import com.google.gson.Gson;
 import java.io.*;
 import java.net.Socket;
+import java.util.Map;
 import java.util.Random;
 
 /**
@@ -21,7 +22,7 @@ public class Veggente implements Runnable {
 
     // Le frasi (domande e futuro, per ogni personalità) lette dal file JSON.
     // Le imposta il main del server: il Veggente non legge il file da solo.
-    Frasi frasi;
+    Map<String, Personalita> frasi;
 
     static final Random random = new Random();// Generatore di numeri casuali per scegliere una frase
 
@@ -103,9 +104,9 @@ public class Veggente implements Runnable {
     // Se per caso la chiave non esiste nel JSON, usa "zoltar" come ripiego.
 
     private Personalita frasiAttuali() {
-        Personalita p = frasi.personalita.get(personalita);
+        Personalita p = frasi.get(personalita);
         if (p == null) {
-            p = frasi.personalita.get("zoltar");
+            p = frasi.get("zoltar");
         }
         return p;
     }
@@ -133,7 +134,7 @@ public class Veggente implements Runnable {
     }
 
     // Imposta le frasi lette dal JSON (chiamato dal main del server)
-    public void setFrasi(Frasi frasi) {
+    public void setFrasi(Map<String, Personalita> frasi) {
         this.frasi = frasi;
     }
 }

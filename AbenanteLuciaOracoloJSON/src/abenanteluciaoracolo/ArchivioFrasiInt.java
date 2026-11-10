@@ -4,6 +4,8 @@
  */
 package abenanteluciaoracolo;
 
+import java.util.Map;
+
 /**
  *
  * @author lucia
@@ -17,9 +19,9 @@ public interface ArchivioFrasiInt {
      */
 
     // Da testo JSON a oggetti Java
-    Frasi deserializza(String json);
+    Map<String, Personalita> deserializza(String json);
 
     // Da oggetti Java a testo JSON
-    String serializza(Frasi frasi);
+String serializza(Map<String, Personalita> frasi);
 
 }
