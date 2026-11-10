@@ -16,12 +16,12 @@ public class ArchivioGson implements ArchivioFrasiInt {
 
     @Override
     public Frasi deserializza(String json) {
-        return gson.fromJson(json, Frasi.class); // testo JSON -> oggetto Frasi
+        return gson.fromJson(json, Frasi.class); // da testo JSON a oggetto Frasi
     }
 
     @Override
     public String serializza(Frasi frasi) {
-        return gson.toJson(frasi); // oggetto Frasi -> testo JSON
+        return gson.toJson(frasi); // da oggetto Frasi a testo JSON
     }
 
 }
